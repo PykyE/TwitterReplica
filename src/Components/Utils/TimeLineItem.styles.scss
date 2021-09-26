@@ -1,0 +1,47 @@
+@mixin font {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.timeLine__home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 16px;
+  height: 53px;
+  &:hover {
+    cursor: pointer;
+  }
+  @include font;
+  .home__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home__imgWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .home__img {
+      width: 40px;
+      height: 40px;
+      transition: background-color 0.2s linear;
+      border-radius: 9999px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // padding: 12px;
+      &:hover {
+        background-color: #161616;
+      }
+    }
+  }
+}
+
+.timeLine__publish {
+  display: grid;
+  
+}

@@ -1,0 +1,8 @@
+.timeLine {
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  > * {
+    border-bottom: 1px solid rgb(47, 51, 54);
+  }
+}

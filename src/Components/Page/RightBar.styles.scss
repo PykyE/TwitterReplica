@@ -1,0 +1,63 @@
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0px 64px 24px;
+  justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  > :not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #202327;
+    border-radius: 9999px;
+    width: 100%;
+    max-width: 350px;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 12px;
+    }
+
+    input {
+      background-color: #202327;
+      text-align: left;
+      font-size: 15px;
+      border-style: none;
+      cursor: text;
+      padding: 12px;
+      line-height: normal;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 16px;
+    width: 350px;
+    @mixin text {
+      font-size: 13px;
+      color: rgb(110, 118, 125);
+      cursor: pointer;
+    }
+    a {
+      @include text;
+      margin: 2px 0px;
+      padding-right: 12px;
+      &:hover {
+        color: rgb(110, 118, 125);
+        text-decoration: underline;
+      }
+    }
+    > span {
+      @include text;
+      cursor: text;
+    }
+  }
+}

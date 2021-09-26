@@ -1,0 +1,124 @@
+.navBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 937px;
+  padding: 0px 12px;
+  position: sticky;
+  top: 0;
+
+  .navBar__upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .upper__item {
+      color: #d9d9d9;
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      padding: 4px 0px;
+
+      .item__wrapper {
+        transition: background-color 0.2s linear;
+        border-radius: 9999px;
+        display: flex;
+        flex-direction: row;
+        padding: 12px;
+
+        .wrapper__svg {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        span {
+          margin: 0px 1em;
+          font-size: 1.25em;
+        }
+        &:hover {
+          background-color: #161616;
+        }
+      }
+    }
+
+    .upper__button {
+      margin: 16px 0px;
+      button {
+        transition: background-color 0.2s;
+        background-color: #1a8cd8;
+        border: none;
+        border-radius: 9999px;
+        width: 225.89px;
+        height: 52px;
+        font-weight: bold;
+        &:hover{
+          background-color: #1676b6;
+        }
+        &:focus{
+          transition: border 0.2s;
+          box-shadow: none;
+          outline: none;
+          border: 2px solid #92C5EE;
+        }
+      }
+    }
+  }
+}
+
+.navBar__lower {
+  transition: background-color 0.2s linear;
+  border-radius: 9999px;
+  display: flex;
+  width: max-content;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 12px;
+  margin: 12px 0px;
+  cursor: pointer;
+  min-width: 250px;
+
+  .profile__img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile__svg {
+    border-radius: 25px;
+  }
+
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 168px;
+
+    span {
+      font-size: 15px;
+      margin: 0px 12px;
+    }
+
+    .userName {
+      white-space: nowrap;
+      max-width: 144px;
+      font-weight: 700;
+      color: #d9d9d9;
+    }
+
+    .userAt {
+      color: rgb(110, 118, 125);
+    }
+  }
+  .profile__dots {
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.navBar__lower:hover {
+  background-color: #161616;
+}
