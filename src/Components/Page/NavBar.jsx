@@ -165,9 +165,7 @@ export default function NavBar() {
           </div>
         </a>
         <div className={styles.upper__button}>
-          <Button variant="primary" className={styles.button}>
-            Twittear
-          </Button>
+          <Button variant="primary">Twittear</Button>
         </div>
       </div>
       <div className={styles.navBar__lower}>

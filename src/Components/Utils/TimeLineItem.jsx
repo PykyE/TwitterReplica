@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./TimeLineItem.styles.scss";
+import { BsFillImageFill } from "react-icons/bs";
+import { AiOutlineFileGif, AiFillSchedule } from "react-icons/ai";
+import { ImStatsBars } from "react-icons/im";
+import { RiEmotionHappyLine } from "react-icons/ri";
+import { Button } from "react-bootstrap";
 
 export default function TimeLineItem(props) {
   switch (props.type) {
@@ -27,7 +32,50 @@ export default function TimeLineItem(props) {
       );
     case "publish":
       return (
-        <div className={styles.timeLine__publish}></div>
+        <div className={styles.timeLine__publish}>
+          <div className={styles.publish__logo}>
+            <div className={styles.profile__img}>
+              <img
+                src="../../assets/Honk.png"
+                width="48"
+                height="48"
+                alt="User profile pic"
+                className={styles.profile__svg}
+                style={{ borderRadius: "9999px" }}
+              />
+            </div>
+          </div>
+          <div className={styles.publish__tweet}>
+            <span
+              data-placeholder={"¿Qué está pasando?"}
+              contenteditable="true"
+            ></span>
+          </div>
+          <div className={styles.publish__options}>
+            <div className={styles.options__icons}>
+              <div className={styles.icon}>
+                <BsFillImageFill />
+              </div>
+              <div className={styles.icon}>
+                <AiOutlineFileGif />
+              </div>
+              <div className={styles.icon}>
+                <ImStatsBars style={{ transform: "rotate(90deg)" }} />
+              </div>
+              <div className={styles.icon}>
+                <RiEmotionHappyLine />
+              </div>
+              <div className={styles.icon}>
+                <AiFillSchedule />
+              </div>
+            </div>
+            <div className={styles.publish__tweetButton}>
+              <Button variant="primary" className={`${styles.button} disabled`}>
+                Twittear
+              </Button>
+            </div>
+          </div>
+        </div>
       );
     case "item":
       return "hola";

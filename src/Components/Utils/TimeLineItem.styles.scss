@@ -7,6 +7,10 @@
 .timeLine__home {
   display: flex;
   flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #000000;
   justify-content: space-between;
   width: 100%;
   padding: 0px 16px;
@@ -33,7 +37,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // padding: 12px;
       &:hover {
         background-color: #161616;
       }
@@ -43,5 +46,106 @@
 
 .timeLine__publish {
   display: grid;
-  
+  padding: 8px 10px;
+  grid-template-columns: auto repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 10px;
+  grid-template-areas:
+    "logo tweet tweet tweet tweet"
+    ". options options options options";
+  .publish__logo {
+    margin-left: 5px;
+    grid-area: logo;
+    .profile__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  .publish__tweet {
+    grid-area: tweet;
+    padding: 5px 0px;
+    span {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      color: #5b656d;
+    }
+    span[contenteditable] {
+      display: inline-block;
+    }
+    span[contenteditable]:empty::before {
+      content: attr(data-placeholder);
+      display: inline-block;
+    }
+    span[contenteditable]:empty:focus::before {
+      content: attr(data-focused-advice);
+    }
+    span[contenteditable]:not(:empty) {
+      color: rgb(217, 217, 217);
+    }
+    span[contenteditable]:focus {
+      outline: none;
+    }
+  }
+
+  .publish__options {
+    margin-top: 8px;
+    grid-area: options;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .options__icons {
+      padding: 10px 0px 8px 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      .icon {
+        transition: background-color 0.2s;
+        border-radius: 9999px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        &:hover {
+          background-color: #161616;
+        }
+        > * {
+          color: #198ad5;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .publish__tweetButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .button {
+        transition: background-color 0.2s;
+        background-color: #1a8cd8;
+        border: none;
+        border-radius: 9999px;
+        width: 92px;
+        height: 36px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        &:hover {
+          background-color: #1676b6;
+        }
+        &:focus {
+          transition: border 0.2s;
+          box-shadow: none;
+          outline: none;
+          border: 2px solid #92c5ee;
+        }
+      }
+    }
+  }
 }
