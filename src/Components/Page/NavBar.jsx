@@ -7,7 +7,7 @@ export default function NavBar() {
     <div className={styles.navBar}>
       <div className={styles.navBar__upper}>
         <a className={styles.upper__item}>
-          <div className={styles.item__wrapper}>
+          <div id={styles["Bird"]} className={styles.item__wrapper}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26.25"
