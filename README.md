@@ -3,6 +3,7 @@
 ## Members
 
 Miguel Ángel Rico García - 20191020107
+Daniel Eduardo Parra Gómez - 20181020110
 
 ## Tools
 
